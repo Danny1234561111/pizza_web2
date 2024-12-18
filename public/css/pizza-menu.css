@@ -1,0 +1,31 @@
+
+.pizza-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+.pizza-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.pizza-item h2 {
+    margin: 0 0 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #d9534f; /* Красный цвет для цены */
+}
+
+.pizza-image {
+    max-width: 100%; /* Ограничиваем ширину изображения */
+    width:400px;
+    height:300px; /* Поддерживаем пропорции */
+    border-radius: 5px; /* Скругляем углы изображения */
+    margin-bottom: 10px; /* Отступ снизу для изображения */
+}
