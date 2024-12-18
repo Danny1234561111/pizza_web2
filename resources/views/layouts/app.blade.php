@@ -16,8 +16,8 @@
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">О нас</a></li>
-                <li class="nav-item"><a class="nav-link" href="/form">Сделать заказ</a></li>
-                <li class="nav-item"><a class="nav-link" href="/data">Заказы готовятся</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/create">Сделать заказ</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product">Заказы готовятся</a></li>
             </ul>
         </nav>
     </div>
