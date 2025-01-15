@@ -8,9 +8,15 @@ use Illuminate\Support\Facades\Storage;  // Импортируем класс St
 
 class FormController extends Controller
 {
-    public function showForm()
+    public function showForm($filename = null)
     {
-        return view('form');
+        $data = null;
+        if ($filename) {
+            // Получаем содержимое файла, если передан filename
+            $content = Storage::disk('local')->get("users/{$filename}");
+            $data = json_decode($content, true);
+        }
+        return view('form', ['data' => $data, 'filename' => $filename]);
     }
 
     public function submitForm(Request $request)
@@ -55,4 +61,3 @@ class FormController extends Controller
         return view('data', ['data' => $data]);
     }
 }
-

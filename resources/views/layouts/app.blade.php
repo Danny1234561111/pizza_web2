@@ -11,13 +11,11 @@
 <body>
 <header>
     <div class="container">
-        <h1>Пицца Дэнни</h1>
+        <h1>ИнстаИркутск</h1>
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="/about">О нас</a></li>
-                <li class="nav-item"><a class="nav-link" href="/product/create">Сделать заказ</a></li>
-                <li class="nav-item"><a class="nav-link" href="/product">Заказы готовятся</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Посты</a></li>
+                <li class="nav-item"><a class="nav-link" href="/product/create">Сделать пост</a></li>
             </ul>
         </nav>
     </div>

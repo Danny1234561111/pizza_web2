@@ -1,51 +1,38 @@
 @extends('layouts.app')
-
 @section('title', 'Форма')
-
 @section('content')
-    <a href="{{ route('product.index') }}">Back</a>
-    <h1>Создать Новый Заказ</h1>
-    <form method="POST" action="{{ route('product.store') }}">
-        @csrf
+    <a href="{{ route('product.index') }}" style="text-decoration: none; color: #007BFF;">Назад</a>
+    <h1 style="text-align: center; color: #333;">Создать Пост</h1>
+    <div style="max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+        <form method="POST" action="{{ route('product.store') }}">
+            @csrf
+            <div style="text-align: left;">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="font-weight: bold;">Тема:</label>
+                    <input type="text" name="name" id="name" value="{{ old('name') }}" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                @error('name')
+                <div style="color: red;">{{ $message }}</div>
+                @enderror
 
-        <label for="name">Name:
-            <input type="text" name="name" id="name" value="{{ old('name') }}">
-        </label>
-        <br>
-        @error('name')
-        <div style="color: red;">{{ $message }}</div>
-        @enderror
-        <br>
+                <div style="margin-bottom: 15px;">
+                    <label for="mail" style="font-weight: bold;">Пост:</label>
+                    <textarea name="mail" id="mail" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">{{ old('mail') }}</textarea>
+                </div>
+                @error('mail')
+                <div style="color: red;">{{ $message }}</div>
+                @enderror
 
-        <label for="mail">Mail:
-            <input type="text" name="mail" id="mail" value="{{ old('mail') }}">
-        </label>
-        <br>
-        @error('mail')
-        <div style="color: red;">{{ $message }}</div>
-        @enderror
-        <br>
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="font-weight: bold;">Почта:</label>
+                    <input type="email" name="email" id="email" value="{{ old('email') }}" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                @error('email')
+                <div style="color: red;">{{ $message }}</div>
+                @enderror
 
-        <label for="email">Email:
-            <input type="email" name="email" id="email" value="{{ old('email') }}">
-        </label>
-        <br>
-        @error('email')
-        <div style="color: red;">{{ $message }}</div>
-        @enderror
-        <br>
-
-        <label for="time">Time:
-            <input type="datetime-local" name="time" id="time" value="{{ old('time') }}">
-        </label>
-        <br>
-        @error('time')
-        <div style="color: red;">{{ $message }}</div>
-        @enderror
-        <br>
-
-        <button type="submit">Save</button>
-    </form>
+                <button type="submit" style="padding: 10px 15px; background-color: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Сохранить</button>
+            </div>
+        </form>
+    </div>
 @endsection
-
-

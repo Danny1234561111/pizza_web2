@@ -6,10 +6,6 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    public function Main()
-    {
-        return view('welcome'); // Возвращаем представление about
-    }
     public function formsend()
     {
         return view('form'); // Возвращаем представление about
